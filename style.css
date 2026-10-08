@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+}
+
+header.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(0,0,0,0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+section {
+    background: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+section ul {
+    margin-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+.arch-diagram {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.arch-step {
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+}
+
+.arch-arrow {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 0 5px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-list li {
+    background: #e8f4fd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border-left: 3px solid #3498db;
+}
+
+.status h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.status ul {
+    margin-left: 25px;
+}
+
+.security ul, .future ul {
+    margin-left: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .arch-diagram {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .arch-step {
+        margin: 5px 0;
+    }
+    .arch-arrow {
+        display: none;
+    }
+    header.hero h1 {
+        font-size: 2.2rem;
+    }
+}

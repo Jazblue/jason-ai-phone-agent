@@ -10,7 +10,7 @@ The Jason AI Phone Agent is an AI-powered voice support system designed to handl
 
 - AI-powered conversational voice agent
 - Vapi integration for voice orchestration
-- Twilio for telephony (UK number +44 117 463 1712)
+- Twilio for telephony (UK number +44 1494 302460)
 - Planned AWS backend (Lambda, API Gateway, DynamoDB)
 - Browser-based voice testing completed
 - Clear, natural conversational interaction verified
@@ -21,7 +21,7 @@ The Jason AI Phone Agent is an AI-powered voice support system designed to handl
 
 ```mermaid
 flowchart LR
-    A[User] --> B[Twilio UK Phone Number<br/>+44 117 463 1712]
+    A[User] --> B[Twilio UK Phone Number<br/>+44 1494 302460]
     B --> C[Vapi]
     C --> D[Jason AI Support Assistant]
     D --> E[Webhook/API]
@@ -52,7 +52,7 @@ Jason AI Support has now successfully completed both inbound and outbound real t
 - Browser voice test completed
 - Voice conversation quality verified (user feedback: "really clear")
 - Twilio account configured
-- UK number selected (+44 117 463 1712)
+- UK number selected (+44 1494 302460)
 - Regulatory bundle submitted and approved (Twilio regulatory approval complete)
 - Twilio UK number connected to Vapi assistant
 - Real inbound telephone test successful (from mobile to Jason AI Support via Twilio number)

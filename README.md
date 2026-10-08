@@ -46,19 +46,21 @@ flowchart LR
 ## Current Status
 
 ### Completed
+October 2026 milestone  Real telephone calling verified
+Jason AI Support has now successfully completed both inbound and outbound real telephone calls using Vapi and Twilio. The assistant can receive calls from a mobile phone and can also initiate an outbound call to a mobile phone. Both directions were tested successfully with live conversation.
 - Vapi assistant created (`Jason AI Support`)
 - Browser voice test completed
 - Voice conversation quality verified (user feedback: "really clear")
 - Twilio account configured
 - UK number selected (+44 117 463 1712)
-- Regulatory bundle submitted (awaiting Twilio review)
+- Regulatory bundle submitted and approved (Twilio regulatory approval complete)
+- Twilio UK number connected to Vapi assistant
+- Real inbound telephone test successful (from mobile to Jason AI Support via Twilio number)
+- Real outbound telephone test successful (from Jason AI Support to mobile phone)
+- Both inbound and outbound real telephone calls connected successfully and allowed conversation with the AI assistant
 
 ### Pending
-- Twilio regulatory approval
-- Twilio number activation
-- Vapi/Twilio connection
-- Real inbound phone test
-- Outbound calling test
+- (All pending telephone tests completed)
 
 ### Planned
 - AWS backend integration

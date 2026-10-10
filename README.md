@@ -1,66 +1,82 @@
 # Jason AI Phone Agent
 
-AI-powered voice support using Vapi, Twilio and AWS
+AI-powered voice support prototype using Vapi and Twilio
 
 ## Overview
 
-The Jason AI Phone Agent is an AI-powered voice support system designed to handle inbound and outbound phone calls with natural, conversational AI. Built using Vapi for AI voice orchestration, Twilio for telephony infrastructure, and planned AWS backend services for data processing and automation, this project aims to demonstrate a production-ready AI telephone agent prototype.
+The Jason AI Phone Agent is an AI-powered voice support system designed to handle inbound and outbound phone calls with natural, conversational AI. Built using Vapi for AI voice orchestration and Twilio for telephony infrastructure, this project demonstrates real telephone calling functionality with a UK number. AWS backend services (Lambda, API Gateway, DynamoDB) are planned for future integration to enable call logging, automation, and scaling.
 
 ## Features
 
+### Implemented
 - AI-powered conversational voice agent
-- Vapi integration for voice orchestration
-- Twilio for telephony (UK number +44 1494 302460)
-- Planned AWS backend (Lambda, API Gateway, DynamoDB)
+- Vapi integration for voice orchestration (assistant: `Jason AI Support`)
+- Twilio for telephony (UK phone number)
+- Real inbound and outbound telephone calls tested and verified
 - Browser-based voice testing completed
 - Clear, natural conversational interaction verified
 - Security-first approach with no hardcoded credentials
-- Modular architecture for easy extensibility
+- Modular design for extensibility
+
+### Planned
+- AWS backend integration (Lambda, API Gateway, DynamoDB)
+- Call logging and records storage
+- Calendar integration for scheduling
+- Human escalation workflow
+- Automated call summaries
+- Monitoring and analytics
 
 ## Architecture
 
+The current implemented flow connects the user to the AI assistant via Twilio and Vapi. Planned AWS integrations extend the system for data processing and automation.
+
 ```mermaid
 flowchart LR
-    A[User] --> B[Twilio UK Phone Number<br/>+44 1494 302460]
+    A[User] --> B[Twilio UK Phone Number<br/>[UK number]]
     B --> C[Vapi]
     C --> D[Jason AI Support Assistant]
-    D --> E[Webhook/API]
-    E --> F[AWS API Gateway]
+    style A fill:#e8f4fd,stroke:#3498db,stroke-width:2px
+    style B fill:#e8f4fd,stroke:#3498db,stroke-width:2px
+    style C fill:#e8f4fd,stroke:#3498db,stroke-width:2px
+    style D fill:#e8f4fd,stroke:#3498db,stroke-width:2px
+    %% Planned components (dashed outline)
+    E[Webhook/API] --> F[AWS API Gateway]
     F --> G[AWS Lambda]
     G --> H[DynamoDB / Calendar / Automation]
+    style E fill:#f9e79f,stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    style F fill:#f9e79f,stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    style G fill:#f9e79f,stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    style H fill:#f9e79f,stroke:#f39c12,stroke-width:2px,stroke-dasharray: 5 5
+    %% Link from assistant to webhook (planned)
+    D --> E
 ```
 
-*Components in red are planned future integrations.*
+*Solid components: implemented and tested. Dashed components: planned future integrations.*
 
 ## Technology Stack
 
 - **Vapi** – AI voice agent platform
 - **Twilio** – Programmable SMS & Voice, UK phone number
+- **Webhooks** – Event-driven integrations (planned)
 - **AWS** – Backend services (planned)
-- **Lambda** – Serverless compute (planned)
-- **API Gateway** – HTTPS endpoints (planned)
-- **DynamoDB** – NoSQL database (planned)
-- **Webhooks** – Event-driven integrations
+  - Lambda – Serverless compute
+  - API Gateway – HTTPS endpoints
+  - DynamoDB – NoSQL database
 - **AI Voice** – Large language model powered voice
 
 ## Current Status
 
 ### Completed
-October 2026 milestone  Real telephone calling verified
-Jason AI Support has now successfully completed both inbound and outbound real telephone calls using Vapi and Twilio. The assistant can receive calls from a mobile phone and can also initiate an outbound call to a mobile phone. Both directions were tested successfully with live conversation.
 - Vapi assistant created (`Jason AI Support`)
 - Browser voice test completed
 - Voice conversation quality verified (user feedback: "really clear")
 - Twilio account configured
-- UK number selected (+44 1494 302460)
+- UK number selected ([UK number])
 - Regulatory bundle submitted and approved (Twilio regulatory approval complete)
 - Twilio UK number connected to Vapi assistant
 - Real inbound telephone test successful (from mobile to Jason AI Support via Twilio number)
 - Real outbound telephone test successful (from Jason AI Support to mobile phone)
 - Both inbound and outbound real telephone calls connected successfully and allowed conversation with the AI assistant
-
-### Pending
-- (All pending telephone tests completed)
 
 ### Planned
 - AWS backend integration
@@ -102,9 +118,11 @@ As this is a portfolio project demonstrating concept and architecture, there is 
 - Comprehensive logging and audit trails
 - Load testing and scalability optimization
 
-## Screenshots / Demo
+## Demo and Screenshots
 
-*(Placeholder for future screenshots of Vapi assistant configuration, Twilio dashboard, and AWS architecture diagrams)*
+The Vapi assistant "Jason AI Support" has been successfully tested through Vapi's browser voice interface, confirming clear, natural conversational interaction. Real telephone calls have been placed and received using the Twilio UK number, demonstrating end-to-end functionality.
+
+*(Placeholder for future screenshots of Vapi assistant configuration, Twilio dashboard, and call logs.)*
 
 ## Author
 

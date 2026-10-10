@@ -15,7 +15,7 @@
 
     <section class="overview">
         <h2>Project Overview</h2>
-        <p>The Jason AI Phone Agent is an AI-powered voice support system designed to handle inbound and outbound phone calls with natural, conversational AI. Built using Vapi for AI voice orchestration, Twilio for telephony infrastructure, and planned AWS backend services for data processing and automation, this project aims to demonstrate a production-ready AI telephone agent prototype.</p>
+        <p>The Jason AI Phone Agent is an AI-powered voice support system designed to handle inbound and outbound phone calls with natural, conversational AI. Built using Vapi for AI voice orchestration and Twilio for telephony infrastructure, this project demonstrates real telephone calling functionality with a UK number ([UK number]). AWS backend services (Lambda, API Gateway, DynamoDB) are planned for future integration to enable call logging, automation, and scaling.</p>
         <p>The primary goal is to explore how modern AI voice platforms can be integrated with traditional telephony and cloud services to create scalable, intelligent phone support that can qualify leads, schedule appointments, answer FAQs, and escalate to human agents when needed.</p>
     </section>
 
@@ -35,21 +35,21 @@
         <div class="arch-diagram">
             <div class="arch-step">User</div>
             <div class="arch-arrow">→</div>
-            <div class="arch-step">Twilio UK Phone Number (+44 1494 302460)</div>
+            <div class="arch-step">Twilio UK Phone Number ([UK number])</div>
             <div class="arch-arrow">→</div>
             <div class="arch-step">Vapi</div>
             <div class="arch-arrow">→</div>
             <div class="arch-step">Jason AI Support Assistant</div>
             <div class="arch-arrow">→</div>
-            <div class="arch-step">Webhook/API</div>
+            <div class="arch-step-planned">Webhook/API</div>
             <div class="arch-arrow">→</div>
-            <div class="arch-step">AWS API Gateway</div>
+            <div class="arch-step-planned">AWS API Gateway</div>
             <div class="arch-arrow">→</div>
-            <div class="arch-step">AWS Lambda</div>
+            <div class="arch-step-planned">AWS Lambda</div>
             <div class="arch-arrow">→</div>
-            <div class="arch-step">DynamoDB / Calendar / Automation</div>
+            <div class="arch-step-planned">DynamoDB / Calendar / Automation</div>
         </div>
-        <p><em>Components labeled as <strong>PLANNED</strong> are future integrations not yet implemented.</em></p>
+        <p><em>Solid components: implemented and tested (User, Twilio, Vapi, Jason AI Support Assistant). Dashed components: planned future integrations (Webhook/API, AWS API Gateway, AWS Lambda, DynamoDB / Calendar / Automation).</em></p>
     </section>
 
     <section class="stack">
@@ -74,7 +74,7 @@
             <li>Browser voice test completed</li>
             <li>Voice conversation quality verified</li>
             <li>Twilio account configured</li>
-            <li>UK number selected (+44 1494 302460)</li>
+            <li>UK number selected ([UK number])</li>
             <li>Regulatory bundle submitted and approved (Twilio regulatory approval complete)</li>
             <li>Twilio UK number connected to Vapi assistant</li>
             <li>Real inbound telephone test successful (from mobile to Jason AI Support via Twilio number)</li>

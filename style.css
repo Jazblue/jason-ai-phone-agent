@@ -87,6 +87,26 @@ section li {
     text-align: center;
 }
 
+.arch-step-planned {
+    background: #fff8e1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    border: 2px dashed #ffb300;
+}
+
+.arch-step-planned {
+    background: #fff8e1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    border: 2px dashed #ffb300;
+}
+
 .arch-arrow {
     font-size: 1.2rem;
     color: #7f8c8d;
@@ -139,6 +159,26 @@ footer {
     .arch-step {
         margin: 5px 0;
     }
+
+.arch-step-planned {
+    background: #fff8e1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    border: 2px dashed #ffb300;
+}
+
+.arch-step-planned {
+    background: #fff8e1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 150px;
+    text-align: center;
+    border: 2px dashed #ffb300;
+}
     .arch-arrow {
         display: none;
     }

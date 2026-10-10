@@ -124,6 +124,8 @@ The Vapi assistant "Jason AI Support" has been successfully tested through Vapi'
 
 *(Placeholder for future screenshots of Vapi assistant configuration, Twilio dashboard, and call logs.)*
 
+A video demo of the agent in action is available: [`When_the_Engineer_Can_t_Answer.mp4`](videos/When_the_Engineer_Can_t_Answer.mp4).
+
 ## Author
 
 Jason Harvey – AWS Cloud Engineer aspirant  

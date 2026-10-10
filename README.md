@@ -32,7 +32,7 @@ The current implemented flow connects the user to the AI assistant via Twilio an
 
 ```mermaid
 flowchart LR
-    A[User] --> B[Twilio UK Phone Number<br/>[UK number]]
+    A[User] --> B["Twilio UK Phone Number (redacted)"]
     B --> C[Vapi]
     C --> D[Jason AI Support Assistant]
     style A fill:#e8f4fd,stroke:#3498db,stroke-width:2px

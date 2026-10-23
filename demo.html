@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phone Agent Demo | Vapi & Twilio Voice Calls</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Watch real AI phone calls made by Jason's voice agent. See how Vapi and Twilio work together with a UK phone number for inbound and outbound calling.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is an AI phone receptionist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI phone receptionist is software that answers inbound and outbound phone calls using natural, conversational AI voice. It handles calls 24/7, qualifies leads, answers FAQs, books appointments, and escalates to human agents when needed — without any human picking up the phone."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this project use a real UK phone number?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A Twilio UK phone number was selected, the regulatory bundle was submitted and approved, and the number was connected to the Vapi AI assistant. Real inbound calls from mobile phones and real outbound calls to mobile phones were both tested and verified successfully."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can the AI answer calls and schedule appointments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The current proof of concept demonstrates conversational call handling with the Vapi assistant. Calendar integration and automated appointment booking are planned as future AWS backend extensions, along with call logging, DynamoDB records, and human escalation workflows."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What technology powers this AI phone agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The system uses Vapi for AI voice orchestration and Twilio for programmable telephony with a UK phone number. AWS backend services including Lambda, API Gateway, and DynamoDB are planned for future integration to add call logging, automation, and scaling capabilities."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this a production-ready AI receptionist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is a proof of concept demonstrating real telephone calling with AI voice. The core telephony and voice orchestration components are implemented and tested. AWS backend integrations for call logging, calendar booking, and production monitoring are planned for future development."
+        }
+      }]
+    }
+    </script>
+    <meta property="og:title" content="Live AI Phone Call Demo | Vapi & Twilio">
+    <meta property="og:description" content="Watch real inbound and outbound AI phone calls made by Jason's voice agent demo.">
+    <link rel="canonical" href="https://jazblue.github.io/jason-ai-phone-agent/demo.html">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Overview</a>
+        <a href="demo.html" class="nav-active">Live Demo</a>
+        <a href="architecture.html">Architecture</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Live AI Phone Call Demonstration</h1>
+        <p>Real voice calls between Jason AI Support and callers</p>
+    </header>
+
+    <div class="container">
+        <section class="demo">
+            <h2>Voice AI Demonstration</h2>
+            <p>The Vapi assistant "Jason AI Support" has been successfully tested through Vapi's browser voice interface.</p>
+            <ul>
+                <li>Voice communication tested successfully</li>
+                <li>Clear, natural conversational interaction verified</li>
+                <li>User feedback: communication was "really clear"</li>
+            </ul>
+            <p><em>Note: While the Vapi assistant was tested via browser voice interface, video demonstrations of live AI phone calls are available below.</em></p>
+        </section>
+
+        <section class="demo">
+            <h2>Live AI Phone Call Demo 1</h2>
+            <video controls style="max-width:600px; width:100%;">
+                <source src="videos/When_the_Engineer_Can_t_Answer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="demo">
+            <h2>Live AI Phone Call Demo 2</h2>
+            <video controls style="max-width:600px; width:100%;">
+                <source src="videos/whatsapp-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="font-weight: bold; cursor: pointer; color: #333;">What is an AI phone receptionist?</summary>
+                <p style="margin-top: 10px; color: #555;">An AI phone receptionist is software that answers inbound and outbound phone calls using natural, conversational AI voice. It handles calls 24/7, qualifies leads, answers FAQs, books appointments, and escalates to human agents when needed — without any human picking up the phone.</p>
+            </details>
+            
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="font-weight: bold; cursor: pointer; color: #333;">Does this use a real UK phone number?</summary>
+                <p style="margin-top: 10px; color: #555;">Yes. A Twilio UK phone number was selected, the regulatory bundle was submitted and approved, and the number was connected to the Vapi AI assistant. Real inbound calls from mobile phones and real outbound calls to mobile phones were both tested and verified successfully.</p>
+            </details>
+            
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="font-weight: bold; cursor: pointer; color: #333;">Can the AI answer calls and schedule appointments?</summary>
+                <p style="margin-top: 10px; color: #555;">The current proof of concept demonstrates conversational call handling with the Vapi assistant. Calendar integration and automated appointment booking are planned as future AWS backend extensions, along with call logging, DynamoDB records, and human escalation workflows.</p>
+            </details>
+            
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <summary style="font-weight: bold; cursor: pointer; color: #333;">What technology powers this AI phone agent?</summary>
+                <p style="margin-top: 10px; color: #555;">The system uses Vapi for AI voice orchestration and Twilio for programmable telephony with a UK phone number. AWS backend services including Lambda, API Gateway, and DynamoDB are planned for future integration to add call logging, automation, and scaling capabilities.</p>
+            </details>
+            
+            <details style="margin-bottom: 15px;">
+                <summary style="font-weight: bold; cursor: pointer; color: #333;">Is this a production-ready AI receptionist?</summary>
+                <p style="margin-top: 10px; color: #555;">This is a proof of concept demonstrating real telephone calling with AI voice. The core telephony and voice orchestration components are implemented and tested. AWS backend integrations for call logging, calendar booking, and production monitoring are planned for future development.</p>
+            </details>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jason Harvey. All rights reserved.</p>
+    </footer>
+</body>
+</html>

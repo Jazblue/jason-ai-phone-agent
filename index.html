@@ -33,6 +33,16 @@
     <meta name="twitter:description" content="AI phone receptionist proof of concept using Vapi and Twilio with a UK phone number. Real inbound and outbound telephone calls tested and verified.">
     <link rel="canonical" href="https://jazblue.github.io/jason-ai-phone-agent/">
     <meta name="twitter:card" content="summary">
+    <style>
+      .business-enquiry{margin:30px 0;padding:26px;background:#f5f7ff;border:1px solid #dbe2ff;border-radius:16px;color:#1f2937}
+      .business-enquiry h2{margin-top:0;color:#1f2a55}
+      .business-enquiry p{line-height:1.6}
+      .business-enquiry .field{display:block;margin:14px 0;font-weight:600}
+      .business-enquiry input,.business-enquiry textarea{display:block;box-sizing:border-box;width:100%;margin-top:6px;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font:inherit;background:#fff;color:#111827}
+      .business-enquiry textarea{min-height:120px;resize:vertical}
+      .business-enquiry button{padding:13px 18px;border:0;border-radius:8px;background:#4f46e5;color:white;font:inherit;font-weight:700;cursor:pointer}
+      #aiEnquiryResponse{margin-top:12px;overflow-wrap:anywhere}
+    </style>
 </head>
 <body>
     <nav class="nav-bar">
@@ -54,6 +64,18 @@
             <p>The primary goal is to explore how modern AI voice platforms can be integrated with traditional telephony and cloud services to create scalable, intelligent phone support that can qualify leads, schedule appointments, answer FAQs, and escalate to human agents when needed.</p>
         </section>
 
+        <section class="business-enquiry" aria-labelledby="ai-enquiry-title">
+          <h2 id="ai-enquiry-title">Interested in an AI phone receptionist?</h2>
+          <p>Tell me about your business, the calls you receive and what you would like an AI phone agent to handle. I’ll get back to you to discuss whether it could be a fit.</p>
+          <form id="aiEnquiryForm">
+            <label class="field" for="aiEnquiryName">Your name<input id="aiEnquiryName" name="name" autocomplete="name" required></label>
+            <label class="field" for="aiEnquiryEmail">Your email<input id="aiEnquiryEmail" name="email" type="email" autocomplete="email" required></label>
+            <label class="field" for="aiEnquiryMessage">What would you like help with?<textarea id="aiEnquiryMessage" name="message" required placeholder="For example, handling missed calls, answering common questions or booking appointments"></textarea></label>
+            <button type="submit">Send business enquiry</button>
+            <div id="aiEnquiryResponse" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
         <div class="quick-links">
             <h2>Explore the Project</h2>
             <div class="link-cards">
@@ -72,5 +94,35 @@
     <footer>
         <p>&copy; 2026 Jason Harvey. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.getElementById("aiEnquiryForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const responseBox = document.getElementById("aiEnquiryResponse");
+        const data = new URLSearchParams();
+        data.append("name", document.getElementById("aiEnquiryName").value.trim());
+        data.append("email", document.getElementById("aiEnquiryEmail").value.trim());
+        data.append("message", "[Source: AI Phone Agent website enquiry]\n" + document.getElementById("aiEnquiryMessage").value.trim());
+        responseBox.textContent = "Sending your enquiry...";
+        try {
+          const response = await fetch("https://8b3275icpc.execute-api.eu-west-2.amazonaws.com/dev/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: data
+          });
+          const text = await response.text();
+          if (response.ok) {
+            responseBox.textContent = text || "Thank you. Your enquiry has been submitted.";
+            form.reset();
+          } else {
+            responseBox.textContent = "Sorry, the enquiry could not be submitted. Please email jasonmariakieran@gmail.com instead.";
+          }
+        } catch (error) {
+          responseBox.textContent = "Sorry, the form could not connect. Please email jasonmariakieran@gmail.com instead.";
+        }
+      });
+    </script>
+
 </body>
 </html>

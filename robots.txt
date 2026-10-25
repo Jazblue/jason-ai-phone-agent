@@ -1,0 +1,5 @@
+# Robots.txt for jason-ai-phone-agent
+User-agent: *
+Allow: /
+
+Sitemap: https://jazblue.github.io/jason-ai-phone-agent/sitemap.xml
